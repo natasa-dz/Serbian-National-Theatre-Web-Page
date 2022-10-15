@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Shows | Pozorišta Srbije</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="pocetni_meni.css">
+
+    <!--aos css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- Navigation section-ikonice menija, logo-a, izlaza, itd. -->
+    <div class="navigacioni__meni">
+
+        <div class="container">
+
+            <div class="nav__wrapper">
+
+                <a href="./pocetni_meni.html" class="logo_pozorista">
+                    <img src="images\theater-masks_2_6.png" alt="Pozorišta Srbije">
+
+                </a>
+                <nav>
+                    
+                    <div class="nav__icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+
+                    </div>
+
+                    <div class="nav__bgOverlay"></div>
+
+                    <ul class="nav__list">
+
+                        <div class="nav__close">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </div>
+
+                        <div class="nav__list__wrapper">
+                            <li><a href="./pocetni_meni.html" class="nav__link">Početna</a></li>
+                            <li><a href="./stranica_pozorista.html" class="nav__link">Pozorišta</a></li>
+                            <li><a href="./stranica_predstave.html" class="nav__link">Predstave</a></li>
+                            <li><a class="nav__link" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Logovanje</a></li>
+                            <li><a href="./izmena_detalja_predstave.html" class="nav__link">Predstave-izmena</a></li>
+                            <li><a href="./administrator.html" class="nav__link">Administracija</a></li>
+                            <li><a href="./korisnik_podaci.html" class="nav__link">Korisnici-podaci</a></li>
+                            <li><a href="./izmena_korisnickih_podataka.html" class="nav__link">Korisnici-izmena</a></li>
+                            <hr class="nav__linija">
+                        </div>
+                        
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kraj Navigaction section-a -->
+
+        <!--POPUP LOGIN FORMA-->
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Uloguj se</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Registruj se</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Email' required >
+            <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+            <input type='checkbox'class='check-box'><span>Upamti moju lozinku</span>
+            <button type='submit'class='submit-btn'>Log in</button>
+         </form>
+         <form id='register' class='input-group-register'>
+             <input type='text'class='input-field'placeholder='Ime' required>
+             <input type='text'class='input-field'placeholder='Prezime ' required>
+             <input type="datetime" class="input-field" placeholder="Unesite datum Vašeg rodjenja" required>
+             <input type="tel" class='input-field' placeholder="Unesite Vaš broj telefona"required>
+             <input type='email'class='input-field'placeholder='Email' required>
+             <input type="text" placeholder="Unesite Vaše korisničko ime" class="input-field" required> 
+             <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+             <input type='password'class='input-field'placeholder='Potvrdite Vašu lozinku'  required>
+             <input type='checkbox'class='check-box'><span>Prihvatam uslove korišćenja</span>
+                    <button type='submit'class='submit-btn'>Registruj se</button>
+             </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register()
+        {
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+        }
+        function login()
+        {
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+        }
+    </script>
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+        <!--UOPSTENI INFO O PREDSTAVAMA-->
+        <section id="sva__pozorista">
+            <div class="container">
+                <div class="sva__pozorista__wrapper">
+                    <div class="sva__pozorista__leva__sekcija">
+                        <div class="sva__pozorista__leva__sekcija__wrapper">
+                            <h1 class="sva__pozorista__heading">Aktuelne predstave</h1>
+                            <h2>Rekli su o predstavama</h2>
+                            <hr class="h2__linija">
+                            <br>
+                            <p class="sva__pozorista__info"> Pojedinac kao publika postaje svedok putanje drugih osoba osim nas samih. Kao umetnici, stavljamo se u emocionalne i intelektualne situacije koje se možda nikada neće pojaviti u našim ličnim životima. Pozorište nas promoviše da damo moć istini, da rizikujemo i da se zalažemo za nove i različite glasove. Pozorište nas podseća da nismo sami. Ne samo da delimo prostor i iskustvo sa umetnicima koji nastupaju, već i sa kolegama iz publike. Filmovi i televizija nemaju istu intimnost ili osećaj učešća. Deljenje iskustva sa živim glumcima i članovima publike uživo nije samo vredno, već je i neophodno za ljudsku vezu.
+                            <h2>Aktuelni repertoar</h2>
+                            <hr class="h2__linija">
+                            <br>
+                            <p class="sva__pozorista__info">Trenutno igrane predstave na repertoaru su:</p>
+                            <ul class="sva__pozorista__lista">
+                                <li><a href="seobe.html" class="sve__predstave__lista" >Seobe, Miloš Crnjanski</a></li>
+                                <li><a href="hamlet.html" class="sve__predstave__lista" >Hamlet, Vilijam Šekspir</a></li>
+                                <li><a href="romeo.html" class="sve__predstave__lista" >Romeo i Julija, Vilijam Šekspir</a></li>
+                                <!--li><a href="uspavana.html" class="sva__pozorista__lista" >Uspavana lepotica, Petar Ilič Čajkovski</a></li-->
+                            </ul>
+                            <div class="btn__wrapper">                        
+                                <a href="pocetni_meni.html" class="btn prvi-btn">- Nazad na početni meni -</a>
+                                <a href="stranica_pozorista.html" class="btn">- Pogledaj pozorišta -</a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="sva__pozorista__desna__sekcija" >
+                            <img src="images/Hamlet-and-Gertrude-hoiz112.jpg" alt="Opera" class="Slike">
+                            <img src="images/Romeo_i_Julija.jpg" alt="Garner" class="Slike">
+                            <img src="images/seobe.jpg" alt="SNP" class="Slike">
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+    
+    
+    <!--SLICICE SA KRATKIM OPISIMA PREDSTAVA-->
+    <section id="predstave__info">
+        <div class="container">
+            <div class="predstave__wrapper">
+                <div class="lista__predstava">
+                    <div class="predstava">
+                        <img src="images/kisspng-black-and-white-clip-art-orchestra-conductor-5b323c43b54074.5529079015300188837424.png" alt="Seobe">
+                    </div>
+                    <h3 class="predstava__naslov">Seobe</h3>
+                    <p class="predstava__text">U slojevitoj prozi, opevan nomadski nagon za daljinom, za nepoznatim mestom o kojem večno maštamo i uprkos svim razočarenjima o kojima znamo, tako nepopravljivo verujemo da ono mora biti bolje od onoga u kome smo. </p>
+                    <h3 class="predstava__naslov">- Miloš Crnjanski -</h3>
+                </div>
+
+                <div class="lista__predstava">
+                    <div class="predstava">
+                        <img src="images/kisspng-william-shakespeare-king-duncan-hamlet-donalbain-m-5ae7e94c2913f1.4316963715251479801683.png" alt="Hamlet">
+                    </div>
+                    <h3 class="predstava__naslov">Hamlet</h3>
+                    <p class="predstava__text">Hamlet je glad za apsolutnom iskrenošću. Glad kao eros. Iskrenost je neodbranjiva žrtva. Žrtva kao odluka, kao radost, kao milosrđe. Žrtva koja prelazi u tradiciju. </p>
+                    <h3 class="predstava__naslov">- Vilijam Šekspir -</h3>
+                </div>
+
+                <div class="lista__predstava">
+                    <div class="predstava">
+                        <img src="images/kisspng-ghost-of-hamlets-father-horatio-romeo-and-juliet-clipart-shakespeare-characters-musician-2-5bf0215f4c4c55.9253468515424638393125.png" alt="Romeo i Julija">
+                    </div>
+                    <h3 class="predstava__naslov">Romeo i Julija</h3>
+                    <p class="predstava__text">Zasnovan na čuvenoj Šekspirovoj tragediji, mjuzikl Romeo i Julija je razigran, ali i napet i mračan pogled na univerzalnu priču ljubavnika iz zavađenih porodica. Može li Romeova i Julijina ljubav da opstane ako su daleko od svojih roditelja i Verone? </p>
+                    <h3 class="predstava__naslov">- Vilijam Šekspir -</h3>
+                </div>
+
+
+                <div class="lista__predstava">
+                    <div class="predstava">
+                        <img src="images/pngfind.com-ballet-png-1594471.png" alt="Uspavana lepotica">
+                    </div>
+                    <h3 class="predstava__naslov">Uspavana lepotica</h3>
+                    <p class="predstava__text">Uz balet Labudovo jezero Petra Čajkovskog, Uspavana lepotica se smatra najpoznatijim delom ovog kompozitora i uopšte jednim od najviše izvođenih na baletskom repertoaru. Sa pričom o ljubavi, raskošnim kostimima, vilama i svojim klasičnim varijacijama, predstavlja pravo baletsko uživanje.</p>
+                    <h3 class="predstava__naslov2">- Petar Ilič Čajkovski -</h3>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="footer__wrapper">
+
+                <div class="footer__col1">
+                    <h3 class="footer__text__tittle">Centrala</h3>
+                    <hr class="footer__line">
+                    <br>
+                    <h3 class="footer__description">Radno vreme</h3>
+                    <p class="footer__description">Radnim danima: <b>10:00h-23:00h</b></p>
+                    <p class="footer__description">Subota: <b>14:00h-22:00h</b></p>
+                    <p class="footer__description">Nedelja: <b>18:00h-23:00h</b></p>
+                    <br>
+                    <p class="footer__description"> <b>Kontakt:</b> 011/876-345</p>
+                    <p class="footer__description">"Movies will make you famous; television will make you rich, but theater will make you good." - <i>Terrence Mann</i></p>
+
+                </div>
+        
+
+
+                <div class="footer__col2">
+                    <h3 class="footer__text__tittle">Linkovi</h3>
+                    <ol class="footer__text">
+                        <li>
+                            <a href="./pocetni_meni.html">Početna</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_pozorista.html">Pozorišta</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_predstave.html">Predstave</a>
+                        </li>
+
+                        <li>
+                            <a href="./prijava_i_registracija.html">Logovanje</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_detalja_predstave.html">Predstave-izmena</a>
+                        </li>
+
+                        <li>
+                            <a href="./administrator.html">Administracija</a>
+                        </li>
+
+                        <li>
+                            <a href="./korisnik_podaci.html">Korisnici-podaci</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_korisnickih_podataka.html">Koriscnici-izmena</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="copyright">
+        <div class="container">
+            <p class="copyright__text">
+            © copyright 2022 Pozorišta Srbije | Sva autorska prava su rezervisana
+            </p>
+        </div>
+        </div>
+
+    <!-- Kraj Footer-a -->
+    <!--aos css-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!--js dugmici overlay-->
+    <script src="main.js"></script>
+</body>
+</html>

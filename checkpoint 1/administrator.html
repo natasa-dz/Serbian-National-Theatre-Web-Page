@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Administrator | Pozorišta Srbije</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="tabela.css">
+
+    <!--aos css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!--NE ZABORAVI DA UBACIS LOGO!-->
+    <!-- Navigation section-ikonice menija, logo-a, izlaza, itd. -->
+    <div class="navigacioni__meni">
+
+        <div class="container">
+
+            <div class="nav__wrapper">
+
+                <a href="./pocetni_meni.html" class="logo_pozorista">
+                    <img src="images\theater-masks_2_6.png" alt="Pozorišta Srbije">
+
+                </a>
+                <nav>
+                    
+                    <div class="nav__icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+
+                    </div>
+
+                    <div class="nav__bgOverlay"></div>
+
+                    <ul class="nav__list">
+
+                        <div class="nav__close">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </div>
+
+                        <div class="nav__list__wrapper">
+                            <li><a href="./pocetni_meni.html" class="nav__link">Početna</a></li>
+                            <li><a href="./stranica_pozorista.html" class="nav__link">Pozorišta</a></li>
+                            <li><a href="./stranica_predstave.html" class="nav__link">Predstave</a></li>
+                            <li><a class="nav__link" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Logovanje</a></li>
+                            <li><a href="./izmena_detalja_predstave.html" class="nav__link">Predstave-izmena</a></li>
+                            <li><a href="./administrator.html" class="nav__link">Administracija</a></li>
+                            <li><a href="./korisnik_podaci.html" class="nav__link">Profil korisnika</a></li>
+                            <li><a href="./izmena_korisnickih_podataka.html" class="nav__link">Izmena korisnika</a></li>
+                            <hr class="nav__linija">
+
+                        </div>
+                        
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kraj Navigaction section-a -->
+
+    
+    <!--POPUP LOGIN FORMA-->
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Uloguj se</button>
+                <button type='button'onclick='register()'class='toggle-btn'>Registruj se</button>
+            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email' required >
+        <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+        <input type='checkbox'class='check-box'><span>Upamti moju lozinku</span>
+        <button type='submit'class='submit-btn'>Log in</button>
+     </form>
+     <form id='register' class='input-group-register'>
+         <input type='text'class='input-field'placeholder='Ime' required>
+         <input type='text'class='input-field'placeholder='Prezime ' required>
+         <input type="datetime" class="input-field" placeholder="Unesite datum Vašeg rodjenja" required>
+         <input type="tel" class='input-field' placeholder="Unesite Vaš broj telefona"required>
+         <input type='email'class='input-field'placeholder='Email' required>
+         <input type="text" placeholder="Unesite Vaše korisničko ime" class="input-field" required> 
+         <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+         <input type='password'class='input-field'placeholder='Potvrdite Vašu lozinku'  required>
+         <input type='checkbox'class='check-box'><span>Prihvatam uslove korišćenja</span>
+                <button type='submit'class='submit-btn'>Registruj se</button>
+         </form>
+        </div>
+    </div>
+</div>
+<script>
+    var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+</script>
+
+<script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+    <h1 class="table_naslov">Podaci o registrovanim korisnicima</h1>
+<!--TABELA SA INFORMACIJAMA O KORISNICIMA-->
+    <div class="header_fixed">
+        <table>
+            <thead>
+                <tr>
+                    <th>Korisnicko ime</th>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Email</th>
+                    <th>Lozinka</th>
+                    <th>Datum rođenja</th>
+                    <th>Adresa</th>
+                    <th>Broj telefona</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>milan_milakovic</td>
+                    <td>Milan</td>
+                    <td>Milaković</td>
+                    <td>milan.milakovic@gmail.com</td>
+                    <td>milan123</td>
+                    <td>13.03.1992.</td>
+                    <td>Marka Miljanova 23, Novi Sad</td>
+                    <td>063/45-22-213</td>
+                </tr>
+
+                <tr>
+                    <td>marko_markovic</td>
+                    <td>Marko</td>
+                    <td>Marković</td>
+                    <td>marko.markovic@gmail.com</td>
+                    <td>marko1</td>
+                    <td>19.08.1994.</td>
+                    <td>Kosovska 12, Novi Sad</td>
+                    <td>064/35-21-653</td>
+                </tr>
+
+                <tr>
+                    <td>ilija_ilic</td>
+                    <td>Ilija</td>
+                    <td>Ilić</td>
+                    <td>ilic.ilija@gmail.com</td>
+                    <td>ilijajekralj1</td>
+                    <td>19.09.1998.</td>
+                    <td>Venizelisova 12, Beograd</td>
+                    <td>069/22-98-743</td>
+                </tr>
+
+                <tr>
+                    <td>lenka_lalic</td>
+                    <td>Lenka</td>
+                    <td>Lalić</td>
+                    <td>lalic.lenka@gmail.com</td>
+                    <td>lenka1</td>
+                    <td>29.02.1996.</td>
+                    <td>Puškinova 4, Beograd</td>
+                    <td>069/22-98-743</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="footer__wrapper">
+
+                <div class="footer__col1">
+                    <h3 class="footer__text__tittle">Centrala</h3>
+                    <hr class="footer__line">
+                    <br>
+                    <h3 class="footer__description">Radno vreme</h3>
+                    <p class="footer__description">Radnim danima: <b>10:00h-23:00h</b></p>
+                    <p class="footer__description">Subota: <b>14:00h-22:00h</b></p>
+                    <p class="footer__description">Nedelja: <b>18:00h-23:00h</b></p>
+                    <br>
+                    <p class="footer__description"> <b>Kontakt:</b> 011/876-345</p>
+                    <p class="footer__description">"Movies will make you famous; television will make you rich, but theater will make you good." - <i>Terrence Mann</i></p>
+
+                </div>
+        
+
+
+                <div class="footer__col2">
+                    <h3 class="footer__text__tittle">Linkovi</h3>
+                    <ol class="footer__text">
+                        <li>
+                            <a href="./pocetni_meni.html">Početna</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_pozorista.html">Pozorišta</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_predstave.html">Predstave</a>
+                        </li>
+
+                        <li>
+                            <a href="./prijava_i_registracija.html">Logovanje</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_detalja_predstave.html">Predstave-izmena</a>
+                        </li>
+
+                        <li>
+                            <a href="./administrator.html">Administracija</a>
+                        </li>
+
+                        <li>
+                            <a href="./korisnik_podaci.html">Korisnici-podaci</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_korisnickih_podataka.html">Koriscnici-izmena</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="copyright">
+        <div class="container">
+            <p class="copyright__text">
+            © copyright 2022 Pozorišta Srbije | Sva autorska prava su rezervisana
+            </p>
+        </div>
+        </div>
+
+    <!-- Kraj Footer-a -->
+    <!--aos css-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!--js dugmici overlay-->
+    <script src="main.js"></script>
+</body>
+</html>
+

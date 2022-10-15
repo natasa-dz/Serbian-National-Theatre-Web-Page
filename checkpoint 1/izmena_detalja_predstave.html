@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Edit show info | Pozorišta Srbije</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="components.css">
+
+    <!--aos css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- Navigation section-ikonice menija, logo-a, izlaza, itd. -->
+    <div class="navigacioni__meni">
+
+        <div class="container">
+
+            <div class="nav__wrapper">
+
+                <a href="./pocetni_meni.html" class="logo_pozorista">
+                    <img src="images\theater-masks_2_6.png" alt="Pozorišta Srbije">
+
+                </a>
+                <nav>
+                    
+                    <div class="nav__icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+
+                    </div>
+
+                    <div class="nav__bgOverlay"></div>
+
+                    <ul class="nav__list">
+
+                        <div class="nav__close">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </div>
+
+                        <div class="nav__list__wrapper">
+                            <li><a href="./pocetni_meni.html" class="nav__link">Početna</a></li>
+                            <li><a href="./stranica_pozorista.html" class="nav__link">Pozorišta</a></li>
+                            <li><a href="./stranica_predstave.html" class="nav__link">Predstave</a></li>
+                            <li><a class="nav__link" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Logovanje</a></li>
+                            <li><a href="./izmena_detalja_predstave.html" class="nav__link">Predstave-izmena</a></li>
+                            <li><a href="./administrator.html" class="nav__link">Administracija</a></li>
+                            <li><a href="./korisnik_podaci.html" class="nav__link">Profil korisnika</a></li>
+                            <li><a href="./izmena_korisnickih_podataka.html" class="nav__link">Izmena korisnika</a></li>
+                            <hr class="nav__linija">
+                        </div>
+                        
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+<!-- Kraj Navigaction section-a -->
+
+<!--POPUP LOGIN FORMA-->
+<div id='login-form'class='login-page'>
+    <div class="form-box">
+        <div class='button-box'>
+            <div id='btn'></div>
+            <button type='button'onclick='login()'class='toggle-btn'>Uloguj se</button>
+            <button type='button'onclick='register()'class='toggle-btn'>Registruj se</button>
+        </div>
+        <form id='login' class='input-group-login'>
+            <input type='text'class='input-field'placeholder='Email' required >
+    <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+    <input type='checkbox'class='check-box'><span>Upamti moju lozinku</span>
+    <button type='submit'class='submit-btn'>Log in</button>
+ </form>
+ <form id='register' class='input-group-register'>
+     <input type='text'class='input-field'placeholder='Ime' required>
+     <input type='text'class='input-field'placeholder='Prezime ' required>
+     <input type="datetime" class="input-field" placeholder="Unesite datum Vašeg rodjenja" required>
+     <input type="tel" class='input-field' placeholder="Unesite Vaš broj telefona"required>
+     <input type='email'class='input-field'placeholder='Email' required>
+     <input type="text" placeholder="Unesite Vaše korisničko ime" class="input-field" required> 
+     <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+     <input type='password'class='input-field'placeholder='Potvrdite Vašu lozinku'  required>
+     <input type='checkbox'class='check-box'><span>Prihvatam uslove korišćenja</span>
+            <button type='submit'class='submit-btn'>Registruj se</button>
+     </form>
+    </div>
+</div>
+</div>
+<script>
+var x=document.getElementById('login');
+var y=document.getElementById('register');
+var z=document.getElementById('btn');
+function register()
+{
+    x.style.left='-400px';
+    y.style.left='50px';
+    z.style.left='110px';
+}
+function login()
+{
+    x.style.left='50px';
+    y.style.left='450px';
+    z.style.left='0px';
+}
+</script>
+
+<script>
+var modal = document.getElementById('login-form');
+window.onclick = function(event) 
+{
+    if (event.target == modal) 
+    {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<!-- Izmena detalja predstave -->
+  <section id="forma">
+    <div class="container">
+      <h3 class="forma__title">Izmena detalja o predstavi</h3>
+      <div class="forma__wrapper">
+        <form name="izmena_detalja_predstave" method="POST" netlify>
+
+          <div class="form__group">
+            <label for="Name">Naziv predstave </label>
+            <input type="text" id="Name" name="Naziv predstave" value="Miloš Crnjanski-Seobe " required>
+          </div>
+
+          <div class="form__group">
+            <label for="kod">Kod predstave </label>
+            <input type="number" id="kod" name="Kod predstave" min="100000" max="999999" value="142002" required>
+          </div>
+
+          <div class="form__group">
+            <label for="posetioci">Max broj posetilaca</label>
+            <input type="number" id="posetioci" name="Max broj posetilaca" min="1" max="2500" value="300" required>
+          </div>
+
+          <div class="form__group">
+            <label for="cena">Cena karte</label>
+            <input type="number" id="posetioci" name="Cena" min="250" max="3500" value="450" required>
+          </div>
+
+          <div class="form__group">
+            <label for="trajanje">Trajanje predstave (izraženo u časovima) </label>
+            <input type="number" id="posetioci" name="Trajanje" min="1" max="10" step="0.1" value="4" required>
+          </div>
+
+          <div class="form__group form__group__full">
+            <label for="note">Kratak opis predstave </label>
+            <textarea name="kratakOpis" id="kratakOpis" rows="3" cols="30" required>U slojevitoj prozi, opevan nomadski nagon za daljinom, za nepoznatim mestom o kojem večno maštamo i uprkos svim razočarenjima o kojima znamo, tako nepopravljivo verujemo da ono mora biti bolje od onoga u kome smo.</textarea>
+          </div>
+
+          <div class="form__group">
+            <label for="zanr">Žanr</label>
+            <select name="zanr" id="placement" value="Drama"required>
+              <option selected disabled>Odaberite jednu od ponudjenih opcija</option>
+              <option value="drama">Drama</option>
+              <option value="tragikomedija">Tragikomedija</option>
+              <option value="komedija">Komedija</option>
+              <option value="farsa">Farsa</option>
+              <option value="muzicka parodija">Muzička parodija</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="Slika">Slika predstave </label>
+            <input type="file" id="Slika" name="Slika predstave" accept="image/*" required>
+          </div>
+
+          <!--
+          <div class="form__group">
+            <label for="Slika">Slika predstave 2 </label>
+            <input type="file" id="Slika" name="Slika predstave" accept="image/*" required>
+          </div>
+
+          
+          <div class="form__group">
+            <label for="Slika">Slika predstave 3 </label>
+            <input type="file" id="Slika" name="Slika predstave" accept="image/*" required>
+          </div>
+
+          
+          <div class="form__group">
+            <label for="Slika">Slika predstave 4 </label>
+            <input type="file" id="Slika" name="Slika predstave" accept="image/*" required>
+          </div>-->
+
+
+          <div class="form__group form__group__full">
+            <label for="note">Detaljan opis predstave</label>
+            <textarea name="detaljanOpis" id="detaljanOpis" rows="6" cols="90">Pavle Isakovič (Volkovič) čezne da stigne u Rusiju, da skine sa duše okove tuđinske, ćiftinske, prizemne – rečju, pešadijske – stvarnosti. Za takav poduhvat, konjički kapetan iščezle vojske (iz iščezle zemlje) nema nikakvo racionalno (političko, ekonomsko, statusno niti nacionalno) opravdanje – osim neizmerne čežnje da se bude negde drugde, da se bude Onaj Drugi. Kapetan Slavonsko-podunavskog puka se pred globalnim, ravnodušno virtuelnim ekranom današnjice otelovljuje kao pripadnik velike porodice literarnih samoizgnanika dvadesetog stoleća: hiperosetljivog Svana, gorkog Dablinca Dedalusa, u sanjarije o bolesti zagledanog Hansa Kastorpa – ali i Artoovog Heliogabala, Brehtovog Galileja, Beketovih klovnova iz Kraja partije… Povrh toga, sve izvesniji i sve bolniji raskorak između stvarne i sanjane “Rosije” razotkriva sinovca Vuka Isakoviča i kao izdanak velike, smrtonosne romantičarske metafore o junačkoj smrti u sedlu, iskazane u Egmontu ili Klajstovom Princu od Homburga: poput njih, i za Pavla Isakoviča prelazak u “pehotu” (pešadiju), makar ona bila i pod zastavom “slavjanske Rosije”, znači srozavanje sna/čežnje u blato banalnosti i novog tavorenja. Tako pitanje smera (samo)izgnanstva – bez obzira na mamce vojničke slave i utehu “jednoverja” – postaje sporedno: kao i za onog prvog Uliksa, to jest (Homerovog) Odiseja, koji je krstario pučinom “modrom poput vina”, za Pavla preostaje tek pitanje-vapaj: “Kirka, ko će me na tom putu onamo vodit?” Vodič u samoizgnanstvo – uloga koju su kod Homera samo formalno obavljali bogovi, a kod Dantea pesnik – junaku modernih vremena nije više dodeljena. Otuda, kako Vida Ognjenović maestralno uviđa, takvu ulogu može preuzeti samo mrtva ljubav, senka ili simulakrum čežnje – Katinka. I upravo zahvaljujući toj iluziji Penelope – što ujedno figurira i kao boginja čežnje, san o Drugom – Pavle Isakovič Volkovič se, na stranputicama koje, umesto vinski modrog mora, razastiru vrletni Karpati i ispošćena stepa, uobličava, dvostrukim obrtom, kao obnovljeno iskonska odisejska obrazina – kao Outis, to jest Niko.</textarea>
+          </div>
+
+          <button type="submit" class="btn prvi-btn">- Izmeni podatke predstave -</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="footer__wrapper">
+
+                <div class="footer__col1">
+                    <h3 class="footer__text__tittle">Centrala</h3>
+                    <hr class="footer__line">
+                    <br>
+                    <h3 class="footer__description">Radno vreme</h3>
+                    <p class="footer__description">Radnim danima: <b>10:00h-23:00h</b></p>
+                    <p class="footer__description">Subota: <b>14:00h-22:00h</b></p>
+                    <p class="footer__description">Nedelja: <b>18:00h-23:00h</b></p>
+                    <br>
+                    <p class="footer__description"> <b>Kontakt:</b> 011/876-345</p>
+                    <p class="footer__description">"Movies will make you famous; television will make you rich, but theater will make you good." - <i>Terrence Mann</i></p>
+
+                </div>
+        
+
+
+                <div class="footer__col2">
+                    <h3 class="footer__text__tittle">Linkovi</h3>
+                    <ol class="footer__text">
+                        <li>
+                            <a href="./pocetni_meni.html">Početna</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_pozorista.html">Pozorišta</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_predstave.html">Predstave</a>
+                        </li>
+
+                        <li>
+                            <a href="./prijava_i_registracija.html">Logovanje</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_detalja_predstave.html">Predstave-izmena</a>
+                        </li>
+
+                        <li>
+                            <a href="./administrator.html">Administracija</a>
+                        </li>
+
+                        <li>
+                            <a href="./korisnik_podaci.html">Korisnici-podaci</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_korisnickih_podataka.html">Koriscnici-izmena</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- End Booking Section -->
+
+    <div id="copyright">
+        <div class="container">
+            <p class="copyright__text">
+            © copyright 2022 Pozorišta Srbije | Sva autorska prava su rezervisana
+            </p>
+        </div>
+        </div>
+
+    <!-- Kraj Footer-a -->
+    <!--aos css-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!--js dugmici overlay-->
+    <script src="main.js"></script>
+</body>
+</html>

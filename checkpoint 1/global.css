@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap');
+
+html{
+    font-size:10px;
+    overflow-x:hidden;
+}
+
+:root{
+    --red-1:hsl(21, 100%, 28%);
+    --red-2:#A64B2A;
+    --popup--:#ddb892;
+    --beige1--:#F1CA89;
+    --brown1--:#D7A86E;
+    --brown2--:#f8daa3ea;
+    --brown3--:#ab5e00;
+    --white1--:#e8e8e8;
+    --yello2--:#FFF6EA;
+    --footer--:#fbe0be;
+    --forma--:#f3d4ae84;
+    --tabela--:#f6c67382;
+    --hover--:#ddb8929c;
+}
+
+body{
+    background-color: var(--yello2--);
+    overflow-x: hidden;
+}
+
+
+section{
+    padding: 100px 0;
+}
+
+/* PODESAVANJE PRIKAZA ZA MANJE UREDJAJE*/
+@media only screen and (max-width: 768px) {
+	section {
+		padding: 50px 0;
+	}
+}
+
+/* POSTAVKA DA BUDE SVE NA MESTU, CENTRIRANO NA SREDINI */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Poppins', 'sans-serif';
+    color:#A64B2A
+}
+
+p{
+    font-family: 'Raleway', 'sans-serif';
+    color:var(--red-1);
+    font-weight: 400;
+    line-height: 1.4em;
+    font-size: 1.8rem;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+ 
+
+
+
+
+

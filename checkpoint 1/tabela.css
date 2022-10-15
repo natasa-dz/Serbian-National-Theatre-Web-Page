@@ -1,0 +1,93 @@
+.table_naslov{
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--red-1);
+}
+table {
+    position: center;
+    margin: 0rem;
+    padding: 0rem;
+    width: 100%;
+    border-collapse:collapse;
+}
+
+.header_fixed {
+    margin: 4rem auto;
+    position:sticky;
+    max-height: 100vh;
+    width: 80%;
+    position: center;
+    overflow: auto;
+    border-radius: 25px;
+    border: 1px solid var(--red-2);
+}
+
+.header_fixed thead th {
+    position:sticky;
+    top: 0;
+    background-color: var(--tabela--);
+    font-family: Poppins;
+    text-align: center;
+    color: var(--red-1);
+    font-size: 15px;
+}
+
+th,
+td {
+    color: var(--red-2);
+    font-family: Poppins;
+    border-bottom: 1px solid var(--red-2);
+    padding: 15px 40px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 768px){
+
+    .table_naslov{
+        font-size: medium;
+        margin-top: 0.6rem;
+        text-align: center;
+        text-decoration: underline;
+        color: var(--red-1);
+    }
+
+    table {
+        position: center;
+        margin: 0rem;
+        padding: 0rem;
+        width: 100%;
+        border-collapse:collapse;
+    }
+
+    .header_fixed {
+        margin: 1.8rem auto;
+        position:sticky;
+        max-height: 80vh;
+        width: 90%;
+        position: center;
+        overflow: auto;
+        border-radius: 25px;
+        border: 0.6px solid var(--red-2);
+    }
+
+    .header_fixed thead th {
+        position:sticky;
+        top: 0;
+        background-color: var(--tabela--);
+        font-family: Poppins;
+        text-align: center;
+        color: var(--red-1);
+        font-size: 10px;
+    }
+
+    th,
+td {
+    color: var(--red-2);
+    font-family: Poppins;
+    border-bottom: 0.6px solid var(--red-2);
+    padding: 8px 17px;
+    font-size: 10px;
+}
+
+}
