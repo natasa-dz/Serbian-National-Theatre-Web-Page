@@ -1,0 +1,129 @@
+/* DESIGN ZA MALE UREDJAJE*/
+.Slike{   
+    border-radius: 8px;
+margin: 2px;}
+
+.sva__pozorista__wrapper{
+    align-items: center;
+    justify-content: center;
+    display:inline-block;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.sva__pozorista__lista{
+    list-style: none;
+    align-items: center;
+    font-family: Poppins;
+    color: var(--brown3--);
+    font-size: 1.05rem;
+    padding-bottom: 3%;
+}
+
+.sve__predstave__lista{
+    list-style: none;
+    align-items: center;
+    font-family: Poppins;
+    color: var(--brown3--);
+    font-size: 1.05rem;
+    padding-bottom: 3%;
+}
+.sve__predstave__lista:hover{
+    color:var(--hover--);
+}
+.sva__pozorista__leva__sekcija__wrapper{
+    max-width: 370px;
+    
+}
+.sva__pozorista__desna__sekcija__wrapper{
+    margin:0 auto;
+    margin-bottom: 2%;
+    max-width: 400px;
+    width: 80%;
+    display:block;
+}
+
+.sva__pozorista__heading{
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 1.4em;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color:var(--red-1);
+}
+
+.sva__pozorista__info{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn__wrapper{
+    text-align: center;
+}
+
+
+/* DESIGN ZA VELIKE UREDJAJE*/
+@media only screen and (min-width: 768px){
+    .sva__pozorista__wrapper{
+        display: flex;
+        align-items: flex-end;
+        align-items: left;
+        justify-content: left;
+        flex-direction: row;
+        gap:0;
+    }
+    .sva__pozorista__leva__sekcija{
+        flex: 4;
+    }
+    .sva__pozorista__desna__sekcija{
+        flex: 3;
+    }
+    .sva__pozorista__heading{
+        margin-top: 0;
+        font-size: 3.6rem;
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    .sva__pozorista__heading1{
+        font-size: 2.2rem;
+        text-align: left;
+    }
+    .sva__pozorista__desna__sekcija__wrapper{
+        max-width: none;
+        width: 95%;
+    }
+
+    .sva__pozorista__info{
+        margin-bottom: 2rem;
+        font-size: 1.7rem;
+        text-align: left;
+    }
+
+    .sva__pozorista__lista{
+        list-style: none;
+        text-align: left;
+        font-family: Poppins;
+        color: var(--brown3--);
+        font-size: 1.5rem;
+    }
+
+    .sve__predstave__lista{
+        list-style: none;
+        text-align: left;
+        font-family: Poppins;
+        color: var(--brown3--);
+        font-size: 1.5rem;
+        transition-duration: 0.4s;
+    }
+
+    .sve__predstave__lista:hover{
+        color: var(--brown1--);
+    }
+    .btn__wrapper{
+        margin-top:2rem;
+        text-align: left;
+    }
+
+}

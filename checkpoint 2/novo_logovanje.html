@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="tabela.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+<body>
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            
+            <form id='login' class='input-group-login'>
+                <h1>Unesite Vaše podatke</h1>
+                <div class="form__group">
+                    <input type='text' id="email" for="email" name="email" class='input-field'placeholder='Email'>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+                <div class="form__group">
+                    <input type='password' type="password" id="lozinka" class='input-field'placeholder='Unesite Lozinku' >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Error Message</p>
+                </div>
+                <input type='checkbox'id="" for="" class='check-box'><span>Upamti moju lozinku</span>
+                <button type='submit'class='submit-btn'>Log in</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <div id='register-form'class='input group-login'>
+
+        <div class="form-box1">
+
+            <form id='login1' class='input-group-login'>
+                
+                <div id='login1' class="form__group">
+                    <h1>Unesite podatke za pravljenje naloga</h1>
+                    <input type='text'class='input-field' id="ime" for="ime" placeholder='Ime' >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+
+                <div id='login1' class="form__group">
+                    <input type='text'class='input-field' id="prezime" for="prezime" placeholder='Prezime ' >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+
+                <div class="form__group">
+                    <input type="datetime" class="input-field" id="datumRodjenja" for="datumRodjenja" placeholder="Unesite datum Vašeg rodjenja" >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+                <div class="form__group">
+                    <input type="tel" class='input-field' id="telefon" for="telefon" placeholder="Unesite Vaš broj telefona">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+                <div class="form__group">
+                    <input type="text" id="korisnickoIme" name="korisnickoIme" placeholder="Unesite Vaše korisničko ime" class="input-field" >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div> 
+                
+                <div class="form__group">
+                    <input type='text' id="email" for="email" name="email" class='input-field'placeholder='Email'>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+                <div class="form__group">
+                    <input type='password' type="password" id="lozinka" for="lozinka" name="lozinka" class='input-field'placeholder='Unesite Lozinku' >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Error Message</p>
+                </div>
+        
+
+                <button type='submit'class='submit-btn'>Registruj se</button>
+                
+
+                
+            </form>
+            
+        </div>
+    </div>
+        <script>
+            var modal = document.getElementById('login-form');
+            window.onclick = function(event) 
+            {
+                if (event.target == modal) 
+                {
+                    modal.style.display = "none";
+                }
+            }
+            var modal = document.getElementById('register-form');
+            window.onclick = function(event) 
+            {
+                if (event.target == modal) 
+                {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+<button class="btn submit-btn"onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Logovanje</button>
+<br><br>
+<button class="btn submit-btn"onclick="document.getElementById('register-form').style.display='block'" style="width:auto;">Registracija</button>
+</body>
+<script src="validacija_pokusaj2.js"></script>
+</html>

@@ -1,0 +1,23 @@
+img{width: 70%;
+border-radius: 20px;
+margin-top: 0.8rem;}
+td{
+    display: grid;
+    font-weight: 500;
+    font-family: Poppins;
+    color: var(--red-1);
+}
+
+  
+  
+.srpska__pozorišta{
+    margin-left: 35rem;
+}
+@media only screen and (max-width: 768px) {
+
+    .srpska__pozorišta{
+        margin-left: 2rem;
+    }
+
+    
+}

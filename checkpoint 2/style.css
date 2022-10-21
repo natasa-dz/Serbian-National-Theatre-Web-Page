@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+
+  :root{
+    --red-1:hsl(21, 100%, 28%);
+    --red-2:#A64B2A;
+    --popup--:#ddb892;
+    --beige1--:#F1CA89;
+    --brown1--:#D7A86E;
+    --brown2--:#f8daa3ea;
+    --brown3--:#ab5e00;
+    --white1--:#e8e8e8;
+    --yello2--:#FFF6EA;
+    --footer--:#fbe0be;
+    --forma--:#f3d4ae84;
+    --tabela--:#f6c67382;
+    --hover--:#ddb8929c;
+}
+  .header {
+    text-align: center;
+    font-family: Poppins;
+    background-color:var(--footer--);
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: var(--red-1);
+    border-radius: 10px;
+    border: 1.8px solid var(--brown3--);
+    width: 90%;
+  }
+  #container {
+    padding: 10px;
+    margin: 10px;
+    background-color:var(--tabela--);
+    border-radius: 10px;
+    border: 1.6px solid var(--brown3--);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .comment-section {
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+  }
+  .new-comment {
+    margin: 5px;
+    width: 40%;
+    height: 50px;
+  }
+  button {
+    width: 50px;
+    height: 25px;
+    padding: 3px;
+    margin: 3px;
+    background-color:var(--hover--);
+    color:var(--red-2);
+    border-radius: 8px;
+    font-family: Poppins;
+    font-weight: 500;
+    border: 1.5px solid var(--brown3--);
+  }
+  textarea {
+    display: block;
+    border-radius: 3px;
+    padding: 15px;
+    font-family: Poppins;
+    font-size: 12px;
+    color: var(--red-1);
+    background-color:#93501a19;
+    border: 1.6px solid var(--brown3--);
+  }
+  span {
+    background-color:var(--brown1--);
+    color: white;
+    padding: 2px;
+    border-radius: 8px;
+  }
+  .new-comment-section {
+    margin-top: 8px;
+    padding: 3px;
+    background-color: var(--beige1--);
+    border: 1.6px solid var(--brown2--);
+    border-radius: 10px;
+  }
+  .child-comment-section {
+    margin: 3px 20px;
+    background-color: var(--footer--);
+    padding: 5px;
+    border-radius: 10px;
+    border: 1.6px solid var(--brown1--);
+  }
+  .new-text-area {
+    width: 40%;
+    margin: 3px;
+  }
+  #text-area{
+    width: 50%;
+  }

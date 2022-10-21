@@ -1,0 +1,786 @@
+/* navigacioni meni*/
+
+.navigacioni__meni{
+    padding: 2rem 0;
+}
+
+.nav__icon,.nav__close,.nav__bg0verlay{
+    display:none;
+}
+.nav__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__list li{
+    display: inline-block;
+    margin: 0 2rem;
+}
+
+.nav__list .nav__link{
+    font-size: 1.23rem;
+    font-family:Poppins;
+    color:var(--red-1);
+    padding: 0.7rem;
+}
+
+.nav__list li:hover .nav__link{
+    color:var(--brown1--);
+}
+.nav__linija{
+    color: var(--red-1);
+}
+
+.h2__linija{
+    border: 0.01px solid var(--red-2);
+    
+}
+
+/* POSTAVKA ZA MALE UREDJAJE-MOBILNI TELEFON */
+@media only screen and (max-width: 768px){
+
+    .nav{
+        position:relative;
+    }
+
+    .nav__icon{
+        display:block;
+    }
+
+    .nav__icon svg, .nav__close svg{
+        pointer-events:none;
+        height: 20px;
+        width: 30px;
+    }
+
+    .nav__close{
+        display:block;
+        position: absolute;
+        color: var(--red1--);
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+    }
+    .nav__list{
+        z-index: 1000;
+        position: absolute;
+        left: 100%;
+        top:0;
+        height: 120vh;
+        width: 80%;
+        background: var(--brown2--);
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+        padding-right:2rem;
+        transform: translate(0%);
+        overflow:hidden;
+        transition: 0.3s ease-in transform;
+    }
+
+    .nav__list.show{
+        transform:translateX(-100%);
+    }
+
+    .nav__list li{
+        display: block;
+        text-align:right;
+        margin-bottom:2rem;
+    }
+
+    .nav__list a{
+        font-size: 1.6rem;
+    }
+
+    .nav__bg0verlay{
+        position:absolute;
+        left:0;
+        top: 0;
+        z-index: 1000;
+        height: 100vh;
+        width: 100%;
+        background: rgba(18, 24, 14, 0.808);
+        display:none;
+    }
+
+    .nav__bgOverlay.active {
+		display: block;
+	}
+}
+
+/* Stilizacija Footer-a */
+footer{
+    background: var(--footer--);
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+.footer__wrapper{
+    display:flex;
+    gap: 3rem;
+    flex-direction: column;
+}
+
+.footer__description{
+    font-size: 1.4rem;
+    color:var(--red-2);
+    margin-bottom: 2rem;
+}
+
+.footer__line{
+    color:var(--red-2);
+
+}
+.footer__text__tittle{
+    font-size:1.8rem;
+    margin-bottom:1rem;
+    color:var(--red-1);
+    font-weight: 600;
+}
+
+.footer__logo{
+    width: 150px;
+    margin-bottom: 2rem;
+
+}
+.footer__text{
+    list-style: none;
+    text-align: left
+}
+.footer__text a{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--red-2);
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+
+
+/*POSTAVKA DA BUDE FOOTER RESPONSIVE ZA vELIKE UREDJAJE */
+@media only screen and (min-width: 768px){
+    footer{
+        padding-top:8rem;
+        padding-bottom: 4rem;
+    }
+    .footer__wrapper{
+        flex-direction: row;
+
+    }
+    .footer__col1{
+        list-style: none;
+        flex:5;
+    }
+    .footer__col2{
+        list-style: none;
+        flex:3;
+    }
+    .footer__text__tittle{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .footer__text a{ 
+        font-size: 1.8rem;
+    margin-bottom: 1rem;}
+}
+#copyright{
+    padding: 1rem 0;
+}
+.copyright__text{
+    font-size: 1.2rem;
+    text-align:center;
+}
+@media only screen and (min-width:768px) {
+    .copyright__text{
+        font-size: 1.6rem;
+        text-align: left;
+    }
+    
+}
+
+/* STILIZACIJA BUTTON-A */
+.btn {
+	color: var(--brown3--);
+	font-family: Poppins;
+	font-weight: 500;
+	border-radius: 8px;
+	font-size: 1.4rem;
+	padding: 1.2rem 2rem;
+    transition-duration: 0.4s;
+}
+.btn:hover {
+    background-color: var(--hover--);
+}
+.prvi-btn {
+	color: var(--yello2--);
+	background: var(--red-2);
+}
+
+@media only screen and (min-width: 780px) {
+	.btn {
+		padding: 1.3rem 2rem;
+		font-size: 2rem;
+	}
+
+    .btn:hover {
+        background-color: var(--hover--);
+    }
+}
+/* KRAJ STILIZACIJA BUTTON-A */
+
+
+/* STILIZACIJA INFO-A O PREDSTAVAMA */
+
+.predstave__wrapper{
+    display:flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 5%;
+}
+
+.lista__predstava{
+    background-color: var(--brown2--);
+    padding: 20px 30px;
+    box-shadow: 0 0 10px 2px #a64b2a5e;
+    text-align: center;
+    border-radius: 12px;
+    width: 150px;
+}
+
+.predstava{
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+.predstava__text{
+    font-size: 1.4rem;
+    font-family: Raleway;
+    font-weight: 500;
+    color: var(--red-2);
+
+}
+.predstava__naslov{
+    font-size: 1.4rem;
+    font-family: Poppins;
+    font-weight: 500;
+    color: var(--red-1);
+
+}
+.predstava__naslov1{
+    font-size: 1.6rem;
+    font-family: Poppins;
+    font-weight: 650;
+    color: var(--red-2);
+} 
+.predstava__naslov2{
+    font-size: 1.6rem;
+    min-width: fit-content;
+    font-family: Poppins;
+    font-weight: 650;
+    color: var(--red-2);
+} 
+
+/* PRIKAZ ZA VELIKE UREDJAJE-KOMPJUTER/TABLET */
+@media only screen and (min-width: 768px) {
+    .predstave__wrapper{
+        gap: 2.1rem;
+    }
+    .lista__predstava{
+        min-width: 230px;
+        padding: 40px 0;
+    }
+
+    .predstava{
+        flex-direction: row-reverse;
+        width: 60px;
+        margin-bottom: 2.5rem;
+    }
+    .predstava__text{
+        margin: 2px 15px 2px 15px;
+        font-size: 1.6rem;
+
+    }
+
+    .predstava__naslov{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .predstava__naslov2{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        min-width: fit-content;
+    }
+
+
+}
+
+/*STILIZACIJA POPUP LOGIN I SIGN IN FORME-ZA VELIKE UREDJAJE*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#login-form
+{
+    display: none;
+}
+#register-form{
+    display: none;
+}
+.form-box
+{   width:40rem;
+	height:67rem;
+	position:relative;
+	margin:2% auto;
+	background: var(--footer--);
+    border-radius: 30px;
+	padding:10px;
+    overflow: hidden;
+}
+.form-box1
+{   width:50rem;
+	height:120rem;
+	position:relative;
+	margin:0 auto;
+	background: var(--footer--);
+    border-radius: 30px;
+	padding:2px;
+    overflow: hidden;
+}
+.button-box
+{
+	width:262px;
+	margin:35px auto;
+	position:relative;
+	box-shadow: 0 0 20px 9px #6f1c1b5d;
+	border-radius: 30px;
+}
+.toggle-btn
+{
+	padding:10px 30px;
+    font-family: Poppins;
+    font-weight: 500;
+    color:var(--red-1);
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+}
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 150.1px;
+	height: 100%;
+	background: #e2ad747d;
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group-login
+{
+	top: 150px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.input-group-register
+{
+    top: 120px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.input-field
+{
+	width: 70%;
+	padding:8px 0;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid var(--red-2);
+	outline:none;
+	background: transparent;
+    font-family: Poppins;
+    color: var(--red-2);
+    font-weight: 400;
+}
+.submit-btn
+{
+	width: 95%;
+	padding: 10px 40px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+    font-family: Poppins;
+    font-weight: 600;
+    color: var(--red-1);
+    font-size: 1.7rem;
+	background: #F3C693;
+	border: 0;
+	outline: none;
+	border-radius: 20px;
+}
+
+.submit-btn1
+{
+	width: 95%;
+	cursor: pointer;
+	display: inline;
+	margin: auto;
+    font-family: Poppins;
+    font-weight: 500;
+    text-align: center;
+    color: var(--red-1);
+    font-size: 0.8rem;
+	background: #F3C693;
+	border: 0;
+	border-radius: 10px;
+    box-shadow: var(--red-2);
+}
+
+.check-box
+{
+	margin: 30px 10px 34px 0;
+    
+}
+span
+{
+    font-family:Poppins;
+	color:var(--red-1);
+    font-weight: 450;
+	font-size:12px;
+	bottom:78px;
+	position:absolute;
+}
+#login
+{
+	left:50px;
+}
+#login input
+{
+	color: hsl(21, 95%, 16%);
+	font-size:15;
+}
+#login1{
+    left:50px;
+}
+#login1 input{
+    color: hsl(21, 95%, 16%);
+	font-size:15;
+}
+#register
+{
+	left:550px;
+}
+#register input
+{
+	color: hsl(21, 95%, 16%);
+	font-size: 15;
+}
+
+
+/*STILIZACIJA POPUP LOGIN I SIGN IN FORME-ZA MALE UREDJAJE*/
+@media only screen and (max-width: 768px){
+    *{
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+#login-form
+{
+    display: none;
+}
+.form-box
+{   width:31rem;
+	height:65rem;
+	position:sticky;
+	margin:2% auto;
+	background: var(--footer--);
+    border-radius: 20px;
+	padding:12px;
+    overflow: hidden;
+}
+.button-box
+{
+	width:252px;
+	margin:35px auto;
+	position:relative;
+	box-shadow: 0 0 20px 9px #6f1c1b5d;
+	border-radius: 40px;
+}
+.toggle-btn
+{
+	padding:10px 30px;
+    font-family: Poppins;
+    font-size: 1.22rem;
+    font-weight: 500;
+    color:var(--red-1);
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+}
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 140.1px;
+	height: 100%;
+	background: #e2ad747d;
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group-login
+{
+	top: 200px;
+	position:absolute;
+	width:200px;
+	transition:.5s;
+}
+.input-group-register
+{
+    top: 120px;
+	position:absolute;
+	width:200px;
+	transition:.5s;
+}
+.input-field
+{
+	width: 100%;
+	padding:10px 0;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid var(--red-2);
+	outline:none;
+	background: transparent;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    color: var(--red-2);
+    font-weight: 400;
+}
+.submit-btn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display:flexbox;
+	margin: auto;
+    font-family: Poppins;
+    font-weight: 600;
+    color: var(--red-1);
+    font-size: 1.7rem;
+	background: #F3C693;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+.check-box
+{
+	margin: 30px 10px 34px 0;
+    
+}
+span
+{
+    font-family:Poppins;
+	color:var(--red-1);
+    font-weight: 450;
+	font-size:12px;
+	bottom:68px;
+	position:absolute;
+}
+#login
+{
+	left:50px;
+}
+#login input
+{
+	color: hsl(21, 95%, 16%);
+	font-size:15;
+}
+#register
+{
+	left:450px;
+}
+#register input
+{
+	color: hsl(21, 95%, 16%);
+	font-size: 15;
+}
+}
+
+
+/* Stilizacija Forme */
+#forma {
+	padding: 7rem 0;
+}
+.forma__title {
+    text-decoration: underline;
+    font-weight: 600;
+	font-size: 1.9rem;
+    color: var(--red-1);
+}
+.forma__wrapper {
+	padding: 4rem 0;
+}
+.forma__wrapper form {
+    gap: 2rem;
+	display: grid;
+	grid-template-columns: 1.2fr;
+	
+}
+.form__group label {
+    font-weight: 500;
+    font-family: Poppins;
+	font-size: 1.6rem;
+	color: var(--red-1);
+	
+}
+.form__group input,
+.form__group textarea,
+.form__group select {
+	width: 100%;
+	border: none;
+	background-color: var(--forma--);
+	font-size: 1.4rem;
+	font-family: Raleway;
+	font-weight: 600;
+	padding: 1.5rem;
+	border-radius: 8px;
+	margin-top: 0.5rem;
+	color: var(--red-2);
+}
+.form__group textarea {
+	resize: vertical;
+}
+.forma__wrapper button[type='submit'] {
+	width: max-content;
+	border: none;
+	padding: 1rem 4rem;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+}
+
+.form__group p{
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
+}
+
+.form__group i{
+    visibility: hidden;
+}
+
+.error input {
+    border:3px red solid;
+}
+
+.success input {
+    border:3px green solid;
+}
+
+.success i.fa-circle-check{
+    visibility: visible;
+    color:green;
+}
+
+.error i.fa-circle-exclamation {
+   visibility: visible;
+   color:red;
+}
+
+.form__group p {
+    font-size: 15px;
+    color:red;
+    visibility: hidden;
+}
+
+.error p {
+    visibility: visible;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+	.forma__title {
+		font-size: 3.7rem;
+        text-decoration: underline;
+	}
+	.forma__wrapper {
+		padding: 5rem 0;
+	}
+	.forma__wrapper form {
+		grid-template-columns: 1.1fr 1.1fr;
+	}
+	.form__group__full {
+		grid-column: 1/3;
+	}
+	.form__group label {
+		font-size: 1.8rem;
+	}
+	.form__group input,
+	.form__group textarea,
+	.form__group select {
+		font-size: 1.4rem;
+		padding: 2.1rem;
+		margin-top: 1.6rem;
+	}
+
+
+    .form__group p{
+        font-size: 12px;
+        color: red;
+        visibility: hidden;
+    }
+    
+    .form__group i{
+        visibility: hidden;
+    }
+    
+    .error input {
+        border:3px red solid;
+    }
+    
+    .success input {
+        border:3px green solid;
+    }
+    
+    .success i.fa-circle-check{
+        visibility: visible;
+        color:green;
+    }
+    
+    .error i.fa-circle-exclamation {
+       visibility: visible;
+       color:red;
+    }
+    
+    .form__group p {
+        font-size: 15px;
+        color:red;
+        visibility: hidden;
+    }
+    
+    .error p {
+        visibility: visible;
+    }
+}
+
+.korisnik{
+    width: 90%;
+    height: auto;
+    padding-bottom: 10%;
+}
+

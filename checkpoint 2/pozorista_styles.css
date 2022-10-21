@@ -1,0 +1,83 @@
+.pozorišta__wrapper{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+    justify-content: center;
+}
+
+.srpska__pozorišta{
+    background-color: var(--brown2--);
+    border-radius: 32px;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.pozorište__naslov{
+    font-family: Poppins;
+    font-size: large;
+    font-weight: 630;
+    color: var(--red-1);
+}
+.opis__naslov{
+    text-align: center;
+    font-size: 2.1rem;
+    font-family: Poppins;
+}
+.pozorište__tekst{
+    font-size: 1.5rem;
+    font-family: Raleway;
+    font-weight: 500;
+    color: var(--red-2);
+}
+.slika{
+    border-radius: 5%;
+    width: 80%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .pozorišta__wrapper{
+        gap: 2.05rem;
+    }
+    .srpska__pozorišta{
+        min-width: 230px;
+        padding: 40px 0;
+    }
+    .srpska__pozorišta{
+        box-shadow: 0 0 8px 2px #a64b2a5e;
+        width: 35%;
+        gap: 1.5rem;
+        padding: 7%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 2.5rem;
+    }
+
+    .pozorište__tekst{
+        margin: 2px 15px 2px 15px;
+        font-size: 1.7rem;
+
+    }
+
+    .pozorište__naslov{
+        font-size: 2.1rem;
+
+    }
+
+    .pozorište__adresa{
+        font-family: Poppins;
+        font-weight: 300;
+        color: var(--red-1);
+    }
+
+    .opis__naslov{
+        text-align: center;
+        font-size: 2.7rem;
+        font-family: Poppins;
+        font-weight: 650;
+    }
+
+
+}
+

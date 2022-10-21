@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Home | Pozorišta Srbije</title>
+
+    <link rel="stylesheet" href="pocetni_meni.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="components.css">
+    <!--aos css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!--NE ZABORAVI DA UBACIS LOGO!-->
+    <!-- Navigation section-ikonice menija, logo-a, izlaza, itd. -->
+    <div class="navigacioni__meni">
+
+        <div class="container">
+
+            <div class="nav__wrapper">
+
+                <a href="./pocetni_meni.html" class="logo_pozorista">
+                    <img src="images\theater-masks_2_6.png" alt="Pozorišta Srbije">
+
+                </a>
+                
+                <nav>
+                    
+                    <div class="nav__icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+
+                    </div>
+
+                    <div class="nav__bgOverlay"></div>
+
+                    <ul class="nav__list">
+
+                        <div class="nav__close">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </div>
+
+                        <div class="nav__list__wrapper">
+                            <li><a href="./pocetni_meni.html" class="nav__link">Početna</a></li>
+                            <li><a href="./pozorista_proba.html" class="nav__link">Pozorišta</a></li>
+                            <li><a href="./tabela_sa_predstavama.html" class="nav__link">Predstave-izmena</a></li>
+                            <li><a href="./administrator.html" class="nav__link">Administracija</a></li>
+                            <hr class="nav__linija">
+                        </div>
+
+                        
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--POPUP LOGIN FORMA
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Uloguj se</button>
+                <button type='button'onclick='register()'class='toggle-btn'>Registruj se</button>
+            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email' required >
+        <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+        <input type='checkbox'class='check-box'><span>Upamti moju lozinku</span>
+        <button type='submit'class='submit-btn'>Log in</button>
+     </form>
+     <form id='register' class='input-group-register'>
+         <input type='text'class='input-field'placeholder='Ime' required>
+         <input type='text'class='input-field'placeholder='Prezime ' required>
+         <input type="datetime" class="input-field" placeholder="Unesite datum Vašeg rodjenja" required>
+         <input type="tel" class='input-field' placeholder="Unesite Vaš broj telefona"required>
+         <input type='email'class='input-field'placeholder='Email' required>
+         <input type="text" placeholder="Unesite Vaše korisničko ime" class="input-field" required> 
+         <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+         <input type='password'class='input-field'placeholder='Potvrdite Vašu lozinku'  required>
+         <input type='checkbox'class='check-box'><span>Prihvatam uslove korišćenja</span>
+        <button type='submit'class='submit-btn'>Registruj se</button>
+     </form>
+        </div>
+    </div>
+</div>
+<script>
+    var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+
+</script>
+
+<script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
+            modal.style.display = "none";
+        }
+    }-->
+</script>
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            
+            <form id='login' class='input-group-login'>
+                <h1>Unesite Vaše podatke</h1>
+                <div class="form__group">
+                    <input type="text" id="korisnickoIme" name="korisnickoIme" placeholder="Unesite Vaše korisničko ime" class="input-field" >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div> 
+                <div class="form__group">
+                    <input type='password' type="password" id="lozinka" class='input-field'placeholder='Unesite Lozinku' >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Error Message</p>
+                </div>
+                <input type='checkbox'id="" for="" class='check-box'><span>Upamti moju lozinku</span>
+                <button type='submit'class='submit-btn'>Log in</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <div id='register-form'class='login-page'>
+
+        <div class="form-box1">
+
+            <form id='login1' class='input-group-login'>
+                
+                <div id='login1' class="form__group">
+                    <h1>Unesite podatke za pravljenje naloga</h1>
+
+                    <input type='text'class='input-field' id="ime" for="ime" name="ime" placeholder='Ime' >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+
+                <div id='login1' class="form__group">
+                    <input type='text'class='input-field' id="prezime" for="prezime" name="prezime"placeholder='Prezime ' >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+
+                <div class="form__group">
+                    <input type="datetime" class="input-field" id="datumRodjenja" for="datumRodjenja" name="datumRodjenja" placeholder="Unesite datum Vašeg rodjenja" >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+                <div class="form__group">
+                    <input type="tel" class='input-field' id="telefon" for="telefon" name="telefon" placeholder="Unesite Vaš broj telefona">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+
+                <div class="form__group">
+                    <input type="tel" class='input-field' id="adresa" for="adresa" name="adresa" placeholder="Unesite Vašu adresu">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+
+                <div class="form__group">
+                    <input type="text" id="korisnickoIme1" name="korisnickoIme1" placeholder="Unesite Vaše korisničko ime" class="input-field" >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div> 
+                
+                <div class="form__group">
+                    <input type='text' id="email" for="email" name="email" class='input-field'placeholder='Email'>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <p>Error Message</p>
+                </div>
+
+                <div class="form__group">
+                    <input type='password'  id="lozinka1" for="lozinka1" name="lozinka1" class='input-field'placeholder='Unesite Lozinku' >
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Error Message</p>
+                </div>
+        
+
+                <button type='submit'class='submit-btn'>Registruj se</button>
+                
+
+                
+            </form>
+            
+        </div>
+    </div>
+        <script>
+            var modal = document.getElementById('login-form');
+            window.onclick = function(event) 
+            {
+                if (event.target == modal) 
+                {
+                    modal.style.display = "none";
+                }
+            }
+            var modal = document.getElementById('register-form');
+            window.onclick = function(event) 
+            {
+                if (event.target == modal) 
+                {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+
+</body>
+<script src="validacija_pokusaj2.js"></script>
+
+    <!--UOPSTENI INFO O POZORISTIMA-->
+    <section id="sva__pozorista">
+        <div class="container">
+            <div class="sva__pozorista__wrapper">
+                <div class="sva__pozorista__leva__sekcija">
+                    <div class="sva__pozorista__leva__sekcija__wrapper">
+                        <h1 class="sva__pozorista__heading">Dobrodošli na stranicu pozorišta Srbije!</h1>
+                        <h2> O ljudima i pozorištu</h2>
+                        <hr class="h2__linija">
+                        <br>
+                        <p class="sva__pozorista__info">Kroz pozorišnu umetnost čoveku je prikazana humanost, psihologija, motivacija, konflikt i rešenje. Mi kao publika postajemo svedoci putanje drugih osoba osim nas samih. Kao umetnici, stavljamo se u emocionalne i intelektualne situacije koje se možda nikada neće pojaviti u našim ličnim životima. Pozorište nas promoviše da damo moć istini, da rizikujemo i da se zalažemo za nove i različite glasove, podseća nas da nismo sami.</p>
+                        <h2>Istorija srpskog teatra</h2>
+                        <hr class="h2__linija">
+                        <br>
+                        <p class="sva__pozorista__info">Ne može se precizno utvrditi kada je pozorišna umetnost počela da se baštini u srpskoj kulturi, jer i sam pojam pozorišta je dosta fluidan. Emanuel Kozačinski, režirao je prvu predstavu „Traedokomediju” u Sremskim Karlovcima 1734. godine. To je bila školska predstava, a svoje prave začetke pozorišna umetnost je dobila radom Joakima Vujića-oca srpskog teatra. Iako su profesionala pozorišta na tlu Srbije počela da se razvijaju sredinom 19. veka, pozorišna izvođenja bez scenarija, s improvizacijom, datiraju iz doba srednjeg veka.</p>
+                        <h2>Pozorište danas</h2>
+                        <hr class="h2__linija">
+                        <br>
+                        <p class="sva__pozorista__info">Jedna od najpoplurajnijih pozorišta u Srbiji, zbog svog raznovrsnog repertoara su:</p>
+                        <ul class="sva__pozorista__lista">
+                            <li class="sva__pozorista__lista">Pozorište na Terazijama, Beograd</li>
+                            <li class="sva__pozorista__lista">Zvezdara Teatar, Beograd</li>
+                            <li class="sva__pozorista__lista">Srpsko narodno pozorište, Novi Sad</li>
+                            <li class="sva__pozorista__lista">Narodno pozorište, Sombor</li>
+                            <li class="sva__pozorista__lista">Knjaževsko-srpski teatar, Kragujevac</li>
+                        </ul>
+                        <div class="btn__wrapper">                        
+                            <a onclick="document.getElementById('login-form').style.display='block'" style="width:auto;" class="btn prvi-btn" id="login-btn">- Uloguj se-</a>
+                            <a  onclick="document.getElementById('register-form').style.display='block'" style="width:auto;" class="btn"> - Registruj se -</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="sva__pozorista__desna__sekcija" >
+                        <img src="images/Opera.jpg" alt="Opera" class="Slike">
+                        <img src="images/Palais_Garnier_(32539469062).jpg" alt="Garner" class="Slike">
+                        <img src="images/IMAG3130-scaled.jpg" alt="SNP" class="Slike">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--INFO SEKCIJA O PREDSTAVAMA-->
+    <section id="predstave__info">
+        <div class="container">
+            <div class="predstave__wrapper">
+                <div class="lista__predstava">
+                    <div class="predstava">
+                        <img src="images/kisspng-black-and-white-clip-art-orchestra-conductor-5b323c43b54074.5529079015300188837424.png" alt="Seobe">
+                    </div>
+                    <h3 class="predstava__naslov">Seobe</h3>
+                    <p class="predstava__text">U slojevitoj prozi, opevan nomadski nagon za daljinom, za nepoznatim mestom o kojem večno maštamo i uprkos svim razočarenjima o kojima znamo, tako nepopravljivo verujemo da ono mora biti bolje od onoga u kome smo. </p>
+                    <h3 class="predstava__naslov">- Miloš Crnjanski -</h3>
+                </div>
+
+                <div class="lista__predstava">
+                    <div class="predstava">
+                        <img src="images/kisspng-william-shakespeare-king-duncan-hamlet-donalbain-m-5ae7e94c2913f1.4316963715251479801683.png" alt="Hamlet">
+                    </div>
+                    <h3 class="predstava__naslov">Hamlet</h3>
+                    <p class="predstava__text">Hamlet je glad za apsolutnom iskrenošću. Glad kao eros. Iskrenost je neodbranjiva žrtva. Žrtva kao odluka, kao radost, kao milosrđe. Žrtva koja prelazi u tradiciju. </p>
+                    <h3 class="predstava__naslov">- Vilijam Šekspir -</h3>
+                </div>
+
+                <div class="lista__predstava">
+                    <div class="predstava">
+                        <img src="images/kisspng-ghost-of-hamlets-father-horatio-romeo-and-juliet-clipart-shakespeare-characters-musician-2-5bf0215f4c4c55.9253468515424638393125.png" alt="Romeo i Julija">
+                    </div>
+                    <h3 class="predstava__naslov">Romeo i Julija</h3>
+                    <p class="predstava__text">Zasnovan na čuvenoj Šekspirovoj tragediji, mjuzikl Romeo i Julija je razigran, ali i napet i mračan pogled na univerzalnu priču ljubavnika iz zavađenih porodica. Može li Romeova i Julijina ljubav da opstane ako su daleko od svojih roditelja i Verone? </p>
+                    <h3 class="predstava__naslov">- Vilijam Šekspir -</h3>
+                </div>
+
+
+                <div class="lista__predstava">
+                    <div class="predstava">
+                        <img src="images/pngfind.com-ballet-png-1594471.png" alt="Uspavana lepotica">
+                    </div>
+                    <h3 class="predstava__naslov">Uspavana lepotica</h3>
+                    <p class="predstava__text">Uz balet Labudovo jezero Petra Čajkovskog, Uspavana lepotica se smatra najpoznatijim delom ovog kompozitora i uopšte jednim od najviše izvođenih na baletskom repertoaru. Sa pričom o ljubavi, raskošnim kostimima, vilama i svojim klasičnim varijacijama, predstavlja pravo baletsko uživanje.</p>
+                    <h3 class="predstava__naslov2">- Petar Ilič Čajkovski -</h3>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="footer__wrapper">
+
+                <div class="footer__col1">
+                    <h3 class="footer__text__tittle">Centrala</h3>
+                    <hr class="footer__line">
+                    <br>
+                    <h3 class="footer__description">Radno vreme</h3>
+                    <p class="footer__description">Radnim danima: <b>10:00h-23:00h</b></p>
+                    <p class="footer__description">Subota: <b>14:00h-22:00h</b></p>
+                    <p class="footer__description">Nedelja: <b>18:00h-23:00h</b></p>
+                    <br>
+                    <p class="footer__description"> <b>Kontakt:</b> 011/876-345</p>
+                    <p class="footer__description">"Movies will make you famous; television will make you rich, but theater will make you good." - <i>Terrence Mann</i></p>
+
+                </div>
+
+        
+
+
+                <div class="footer__col2">
+                    <h3 class="footer__text__tittle">Linkovi</h3>
+                    <ol class="footer__text">
+                        <li>
+                            <a href="./pocetni_meni.html">Početna</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_pozorista.html">Pozorišta</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_predstave.html">Predstave</a>
+                        </li>
+
+                        <li>
+                            <a class="nav__link" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Logovanje</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_detalja_predstave.html">Predstave-izmena</a>
+                        </li>
+
+                        <li>
+                            <a href="./administrator.html">Administracija</a>
+                        </li>
+
+                        <li>
+                            <a href="./korisnik_podaci.html">Korisnici-podaci</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_korisnickih_podataka.html">Koriscnici-izmena</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="copyright">
+        <div class="container">
+            <p class="copyright__text">
+            © copyright 2022 Pozorišta Srbije | Sva autorska prava su rezervisana
+            </p>
+        </div>
+    </div>
+
+    <!-- Kraj Footer-a -->
+    <!--aos css-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!--js dugmici overlay-->
+    <script src="./main.js"></script>
+</body>
+</html>
+
+

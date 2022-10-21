@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap');
+#slika, #slika1, #slika2, #slika3, #slika4, #slika5, #slika6, #slika7, #slika8, #slika9{
+    border-radius: 20px;
+    width: 20%;
+    margin-left: 47rem;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+
+}
+
+.sva__pozorista__heading {
+    margin-top: 0;
+    font-size: 3.6rem;
+    text-align: center;
+    text-decoration: underline;
+    margin-left: 2rem;
+    margin-bottom: 2rem;}
+
+th{
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--red-1);
+    font-family: Poppins;
+    border-bottom: 0.5px solid var(--red-2);
+}
+td{
+    text-align: center;
+    color: var(--red-2);
+    font-family: Poppins;
+    font-size: 14px;
+    table-layout: auto;
+    }
+table {
+    position: center;
+    margin: 0rem;
+    padding: 0rem;
+    width: 100%;
+    border: 1px solid var(--red-2);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    margin-top: 0.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+#slika, #slika1, #slika2, #slika3, #slika4, #slika5, #slika6, #slika7, #slika8, #slika9{
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 10rem;
+    position: relative;
+    display: inline-block;
+    justify-content: center;}
+
+
+
+.sva__pozorista__heading {
+    margin-top: 0;
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: underline;
+    margin-left: 2rem;
+    margin-bottom: 2rem;}
+
+
+
+th{
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--red-1);
+    font-family: Poppins;
+    border-bottom: 0.5px solid var(--red-2);
+}
+td{
+    text-align: center;
+    color: var(--red-2);
+    font-family: Poppins;
+    font-size: 8px;
+    table-layout: auto;
+    display: grid;
+    }
+table {
+    position: center;
+    margin: 0rem;
+    padding: 0rem;
+    width: 100%;
+    display: grid;
+    border: 1px solid var(--red-2);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    margin-top: 0.4rem;
+}}

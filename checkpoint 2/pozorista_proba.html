@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Theater Page | Pozorišta Srbije</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="tabela_pozorista_stilizacija.css">
+    <link rel="stylesheet" href="global1.css">
+
+    <!--aos css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- NAVIGATION SECTION - ORIJENTACIJA PO SAJTU -->
+    <div class="navigacioni__meni">
+
+        <div class="container">
+
+            <div class="nav__wrapper">
+
+                <a href="./pocetni_meni.html" class="logo_pozorista">
+                    <img src="images\theater-masks_2_6.png" alt="Pozorišta Srbije">
+
+                </a>
+                <nav>
+                    
+                    <div class="nav__icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+
+                    </div>
+
+                    <div class="nav__bgOverlay"></div>
+
+                    <ul class="nav__list">
+
+                        <div class="nav__close">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </div>
+
+                        <div class="nav__list__wrapper">
+                            <li><a href="./pocetni_meni.html" class="nav__link">Početna</a></li>
+                            <li><a href="./stranica_pozorista.html" class="nav__link">Pozorišta</a></li>
+                            <li><a href="./tabela_sa_predstavama.html" class="nav__link">Predstave-izmena</a></li>
+                            <li><a href="./administrator.html" class="nav__link">Administracija</a></li>
+                            <hr class="nav__linija">
+                        </div>
+                        
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kraj Navigaction section-a -->
+
+    <!--POPUP LOGIN FORMA-->
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Uloguj se</button>
+                <button type='button'onclick='register()'class='toggle-btn'>Registruj se</button>
+            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email' required >
+        <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+        <input type='checkbox'class='check-box'><span>Upamti moju lozinku</span>
+        <button type='submit'class='submit-btn'>Log in</button>
+        </form>
+        <form id='register' class='input-group-register'>
+            <input type='text'class='input-field'placeholder='Ime' required>
+            <input type='text'class='input-field'placeholder='Prezime ' required>
+            <input type="datetime" class="input-field" placeholder="Unesite datum Vašeg rodjenja" required>
+            <input type="tel" class='input-field' placeholder="Unesite Vaš broj telefona"required>
+            <input type='email'class='input-field'placeholder='Email' required>
+            <input type="text" placeholder="Unesite Vaše korisničko ime" class="input-field" required> 
+            <input type='password'class='input-field'placeholder='Unesite Lozinku' required>
+            <input type='password'class='input-field'placeholder='Potvrdite Vašu lozinku'  required>
+            <input type='checkbox'class='check-box'><span>Prihvatam uslove korišćenja</span>
+                <button type='submit'class='submit-btn'>Registruj se</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register()
+        {
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+        }
+        function login()
+        {
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+        }
+    </script>
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!--POCETAK STRANICE-->
+    <div class="opis">
+        <div class="container">
+            <div class="opis__wrapper">
+                <h1 class="opis__naslov"> Najpopularnija pozorišta </h1>
+                <!--Period posle Drugog svetskog rata, obeležilo je osnivanje brojnih novih institucija u oblasti kulture, prosvete i nauke. Došlo je do ekspanzije profesionalnih i poluprofesionalnih pozorišta, otvarane su muzičke, baletske i pozorišne škole, a sami glumci su uživali gotovo kultni status.-->  
+            </div>
+        </div>
+    </div>
+    <!--KRAJ POCETKA-->
+
+    <!--OPIS POZORIŠTA-->
+    <section id="pozorišta">
+        <div class="container">
+            <div class="pozorišta__wrapper">
+
+                <div class="srpska__pozorišta pozoriste1">
+                    <div class="pozorište">
+                        <h3 class="pozorište__naslov">- Pozorište 1 -</h3>
+                        <img src="" id="slika1" class="slika">
+                        <table>
+                                <thead>
+                                    <tr>
+                                        <th>Adresa</th>
+                                        <th>Broj predstava</th>
+                                        <th>idPredstave</th>
+                                        <th>Naziv pozorista</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabela1"></tbody>
+                        </table>
+                        </div>
+                        <!--dodaj btn za trenutni repertoar-->
+                    </div>
+
+
+                </div>
+                
+                <div class="srpska__pozorišta">
+                    <div class="pozorište">
+                    <h3 class="pozorište__naslov">- Pozorište 2 -</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Adresa</th>
+                                <th>Broj predstava</th>
+                                <th>idPredstave</th>
+                                <th>Naziv pozorista</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela2"></tbody>
+                        <img src="" id="slika2">
+                    </table>
+                    </div>
+
+                </div>
+
+                <div class="srpska__pozorišta">
+                    <div class="pozorište">
+                    <h3 class="pozorište__naslov">- Pozorište 3 -</h3>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Adresa</th>
+                                    <th>Broj predstava</th>
+                                    <th>idPredstave</th>
+                                    <th>Naziv pozorista</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela3"></tbody>
+                            <img src="" id="slika3">
+                        </table>
+                    </div>
+
+
+                </div>
+
+                <div class="srpska__pozorišta">
+                    <div class="pozorište">
+                    <h3 class="pozorište__naslov">- Pozorište 4 -</h3>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Adresa</th>
+                                    <th>Broj predstava</th>
+                                    <th>idPredstave</th>
+                                    <th>Naziv pozorista</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela4"></tbody>
+                            <img src="" id="slika4">
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="srpska__pozorišta">
+                    <div class="pozorište">
+                    <h3 class="pozorište__naslov">- Pozorište 5 -</h3>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Adresa</th>
+                                    <th>Broj predstava</th>
+                                    <th>idPredstave</th>
+                                    <th>Naziv pozorista</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela5"></tbody>
+                            <img src="" id="slika5">
+                        </table>
+                    </div>
+
+                </div>
+
+
+                <div class="srpska__pozorišta">
+                    <div class="pozorište">
+                    <h3 class="pozorište__naslov">- Pozorište 6 -</h3>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Adresa</th>
+                                    <th>Broj predstava</th>
+                                    <th>idPredstave</th>
+                                    <th>Naziv pozorista</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela6"></tbody>
+                            <img src="" id="slika6">
+                        </table>
+                    </div>
+
+
+                </div>
+
+                <div class="srpska__pozorišta">
+                    <div class="pozorište">
+                    <h3 class="pozorište__naslov">- Pozorište 7 -</h3>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Adresa</th>
+                                    <th>Broj predstava</th>
+                                    <th>idPredstave</th>
+                                    <th>Naziv pozorista</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela7"></tbody>
+                            <img src="" id="slika7">
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="srpska__pozorišta">
+                    <div class="pozorište">
+                    <h3 class="pozorište__naslov">- Pozorište 8 -</h3>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Adresa</th>
+                                    <th>Broj predstava</th>
+                                    <th>idPredstave</th>
+                                    <th>Naziv pozorista</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela8"></tbody>
+                            <img src="" id="slika8">
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="srpska__pozorišta">
+                    <div class="pozorište">
+                    <h3 class="pozorište__naslov">- Pozorište 9 -</h3>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Adresa</th>
+                                    <th>Broj predstava</th>
+                                    <th>idPredstave</th>
+                                    <th>Naziv pozorista</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela9"></tbody>
+                            <img src="" id="slika9">
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="ucitaj_sva_pozorista.js"></script>
+    <!--KRAJ OPISA POZORIŠTA-->
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="footer__wrapper">
+
+                <div class="footer__col1">
+                    <h3 class="footer__text__tittle">Centrala</h3>
+                    <hr class="footer__line">
+                    <br>
+                    <h3 class="footer__description">Radno vreme</h3>
+                    <p class="footer__description">Radnim danima: <b>10:00h-23:00h</b></p>
+                    <p class="footer__description">Subota: <b>14:00h-22:00h</b></p>
+                    <p class="footer__description">Nedelja: <b>18:00h-23:00h</b></p>
+                    <br>
+                    <p class="footer__description"> <b>Kontakt:</b> 011/876-345</p>
+                    <p class="footer__description">"Movies will make you famous; television will make you rich, but theater will make you good." - <i>Terrence Mann</i></p>
+
+                </div>
+        
+
+
+                <div class="footer__col2">
+                    <h3 class="footer__text__tittle">Linkovi</h3>
+                    <ol class="footer__text">
+                        <li>
+                            <a href="./pocetni_meni.html">Početna</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_pozorista.html">Pozorišta</a>
+                        </li>
+
+                        <li>
+                            <a href="./stranica_predstave.html">Predstave</a>
+                        </li>
+
+                        <li>
+                            <a href="./prijava_i_registracija.html">Logovanje</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_detalja_predstave.html">Predstave-izmena</a>
+                        </li>
+
+                        <li>
+                            <a href="./administrator.html">Administracija</a>
+                        </li>
+
+                        <li>
+                            <a href="./korisnik_podaci.html">Korisnici-podaci</a>
+                        </li>
+
+                        <li>
+                            <a href="./izmena_korisnickih_podataka.html">Koriscnici-izmena</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="copyright">
+        <div class="container">
+            <p class="copyright__text">
+            © copyright 2022 Pozorišta Srbije | Sva autorska prava su rezervisana
+            </p>
+        </div>
+        </div>
+
+    <!-- Kraj Footer-a -->
+    <!--aos css-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!--js dugmici overlay-->
+    <script src="main.js"></script>
+</body>
+</html>
